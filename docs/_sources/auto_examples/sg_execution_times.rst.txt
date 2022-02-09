@@ -5,20 +5,20 @@
 
 Computation times
 =================
-**02:33.709** total execution time for **auto_examples** files:
+**02:37.002** total execution time for **auto_examples** files:
 
 +---------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_plot_cross_session_motor_imagery.py` (``plot_cross_session_motor_imagery.py``)         | 00:42.433 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_plot_cross_session_motor_imagery.py` (``plot_cross_session_motor_imagery.py``)         | 00:37.588 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_plot_within_session_p300.py` (``plot_within_session_p300.py``)                         | 00:34.119 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_plot_within_session_p300.py` (``plot_within_session_p300.py``)                         | 00:32.187 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_plot_cross_session_ssvep.py` (``plot_cross_session_ssvep.py``)                         | 00:28.453 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_plot_within_session_ssvep.py` (``plot_within_session_ssvep.py``)                       | 00:29.373 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_plot_cross_session_multiple_datasets.py` (``plot_cross_session_multiple_datasets.py``) | 00:22.375 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_plot_cross_session_multiple_datasets.py` (``plot_cross_session_multiple_datasets.py``) | 00:22.803 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_plot_explore_paradigm.py` (``plot_explore_paradigm.py``)                               | 00:14.405 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_plot_cross_subject_ssvep.py` (``plot_cross_subject_ssvep.py``)                         | 00:20.264 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_plot_cross_subject_ssvep.py` (``plot_cross_subject_ssvep.py``)                         | 00:11.923 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_plot_explore_paradigm.py` (``plot_explore_paradigm.py``)                               | 00:14.785 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------------+-----------+--------+
 | :ref:`sphx_glr_auto_examples_changing_download_directory.py` (``changing_download_directory.py``)                   | 00:00.000 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------------+-----------+--------+

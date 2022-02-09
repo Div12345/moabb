@@ -19,9 +19,9 @@
 
 
 ===========================
-Cross Subject SSVEP
+Cross-Subject SSVEP
 ===========================
-This example shows how to perform a cross subject analysis on a SSVEP dataset.
+This example shows how to perform a cross-subject analysis on an SSVEP dataset.
 We will compare two pipelines :
 
 - Riemannian Geometry
@@ -98,11 +98,11 @@ We will use the SSVEP paradigm, which uses the AUC as metric.
 
 .. GENERATED FROM PYTHON SOURCE LINES 39-48
 
-Loading dataset
+Loading Dataset
 ---------------
 
 We will load the data from the first 2 subjects of the ``SSVEP_Exo`` dataset
-and compare two algorithms on this set. One of the algorithm could only
+and compare two algorithms on this set. One of the algorithms could only
 process class associated with a stimulation frequency, we will thus drop
 the resting class. As the resting class is the last defined class, picking
 the first three classes (out of four) allows to focus only on the stimulation
@@ -127,7 +127,7 @@ frequency.
 
 .. GENERATED FROM PYTHON SOURCE LINES 55-66
 
-Choose paradigm
+Choose Paradigm
 ---------------
 
 We define the paradigms (SSVEP, SSSVEP_TRCA and FilterBankSSVEP) and use the dataset
@@ -137,7 +137,7 @@ no filtering, while the FilterBankSSVEP paradigm uses as many bandpass filters a
 there are stimulation frequencies (here 2). For each stimulation frequency
 the EEG is filtered with a 1 Hz-wide bandpass filter centered on the
 frequency. This results in ``n_classes`` copies of the signal, filtered for each
-class, as used in filterbank motor imagery paradigms.
+class, as used in the filterbank motor imagery paradigms.
 
 .. GENERATED FROM PYTHON SOURCE LINES 66-71
 
@@ -178,7 +178,7 @@ to 0 and 1
 
 .. GENERATED FROM PYTHON SOURCE LINES 80-89
 
-Create pipelines
+Create Pipelines
 ----------------
 
 Pipelines must be a dict of sklearn pipeline transformer.
@@ -186,7 +186,7 @@ The first pipeline uses Riemannian geometry, by building an extended
 covariance matrices from the signal filtered around the considered
 frequency and applying a logistic regression in the tangent plane.
 The second pipeline relies on the above defined CCA classifier.
-The third pipeline relies on TRCA algorithm.
+The third pipeline relies on the TRCA algorithm.
 
 .. GENERATED FROM PYTHON SOURCE LINES 89-106
 
@@ -221,7 +221,7 @@ The third pipeline relies on TRCA algorithm.
 Evaluation
 ----------
 
-The evaluation will return a dataframe containing a single AUC score for
+The evaluation will return a DataFrame containing an accuracy score for
 each subject / session of the dataset, and for each pipeline.
 
 Results are saved into the database, so that if you add a new pipeline, it
@@ -244,12 +244,24 @@ be overwritten if necessary.
 
 
 
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+      0%|                                              | 0.00/2.06M [00:00<?, ?B/s]      4%|█▍                                    | 80.9k/2.06M [00:00<00:04, 438kB/s]      7%|██▊                                    | 145k/2.06M [00:00<00:03, 528kB/s]     18%|███████▏                               | 376k/2.06M [00:00<00:01, 914kB/s]     42%|████████████████                      | 867k/2.06M [00:00<00:00, 1.67MB/s]     68%|█████████████████████████            | 1.39M/2.06M [00:00<00:00, 2.11MB/s]     91%|█████████████████████████████████▌   | 1.87M/2.06M [00:01<00:00, 2.25MB/s]      0%|                                              | 0.00/2.06M [00:00<?, ?B/s]    100%|█████████████████████████████████████| 2.06M/2.06M [00:00<00:00, 2.97GB/s]
+      0%|                                              | 0.00/2.82M [00:00<?, ?B/s]      3%|█                                     | 80.9k/2.82M [00:00<00:07, 373kB/s]      4%|█▋                                     | 119k/2.82M [00:00<00:07, 370kB/s]      6%|██▏                                    | 156k/2.82M [00:00<00:07, 365kB/s]      7%|██▋                                    | 193k/2.82M [00:00<00:07, 364kB/s]      9%|███▍                                   | 245k/2.82M [00:00<00:08, 320kB/s]     10%|███▊                                   | 279k/2.82M [00:00<00:07, 323kB/s]     12%|████▊                                  | 343k/2.82M [00:01<00:07, 309kB/s]     15%|█████▋                                 | 409k/2.82M [00:01<00:07, 325kB/s]     16%|██████▏                                | 442k/2.82M [00:01<00:07, 321kB/s]     18%|███████                                | 507k/2.82M [00:01<00:07, 327kB/s]     20%|███████▉                               | 572k/2.82M [00:01<00:06, 333kB/s]     23%|████████▊                              | 638k/2.82M [00:01<00:06, 340kB/s]     25%|█████████▋                             | 703k/2.82M [00:02<00:06, 344kB/s]     27%|██████████▋                            | 769k/2.82M [00:02<00:05, 346kB/s]     30%|███████████▌                           | 835k/2.82M [00:02<00:05, 345kB/s]     32%|████████████▍                          | 900k/2.82M [00:02<00:05, 346kB/s]     34%|█████████████▎                         | 966k/2.82M [00:02<00:05, 347kB/s]     37%|█████████████▉                        | 1.03M/2.82M [00:03<00:05, 347kB/s]     39%|██████████████▊                       | 1.10M/2.82M [00:03<00:04, 346kB/s]     41%|███████████████▋                      | 1.16M/2.82M [00:03<00:04, 335kB/s]     44%|████████████████▌                     | 1.23M/2.82M [00:03<00:04, 337kB/s]     45%|█████████████████                     | 1.26M/2.82M [00:03<00:04, 330kB/s]     47%|█████████████████▉                    | 1.33M/2.82M [00:03<00:04, 334kB/s]     49%|██████████████████▊                   | 1.39M/2.82M [00:04<00:04, 339kB/s]     52%|███████████████████▋                  | 1.46M/2.82M [00:04<00:03, 343kB/s]     54%|████████████████████▌                 | 1.52M/2.82M [00:04<00:03, 346kB/s]     56%|█████████████████████▍                | 1.59M/2.82M [00:04<00:03, 348kB/s]     59%|██████████████████████▎               | 1.65M/2.82M [00:04<00:03, 349kB/s]     61%|███████████████████████               | 1.71M/2.82M [00:04<00:02, 393kB/s]     64%|████████████████████████▍             | 1.81M/2.82M [00:05<00:01, 516kB/s]     73%|███████████████████████████▋          | 2.05M/2.82M [00:05<00:00, 791kB/s]    2.82MB [00:05, 2.29MB/s]                                                             0%|                                              | 0.00/2.82M [00:00<?, ?B/s]    100%|█████████████████████████████████████| 2.82M/2.82M [00:00<00:00, 13.0GB/s]
+      0%|                                              | 0.00/2.58M [00:00<?, ?B/s]      3%|█▏                                    | 80.9k/2.58M [00:00<00:05, 438kB/s]      6%|██▏                                    | 146k/2.58M [00:00<00:06, 388kB/s]      8%|███▏                                   | 212k/2.58M [00:00<00:06, 371kB/s]     10%|███▊                                   | 250k/2.58M [00:00<00:06, 364kB/s]     12%|████▋                                  | 310k/2.58M [00:00<00:07, 288kB/s]     15%|█████▋                                 | 376k/2.58M [00:01<00:07, 305kB/s]     17%|██████▋                                | 441k/2.58M [00:01<00:06, 319kB/s]     22%|████████▋                              | 572k/2.58M [00:01<00:04, 438kB/s]     27%|██████████▌                            | 703k/2.58M [00:01<00:03, 520kB/s]     33%|████████████▊                          | 851k/2.58M [00:01<00:02, 596kB/s]     38%|██████████████▊                        | 982k/2.58M [00:02<00:02, 629kB/s]     44%|████████████████▌                     | 1.13M/2.58M [00:02<00:01, 776kB/s]     47%|█████████████████▊                    | 1.22M/2.58M [00:02<00:02, 683kB/s]     53%|████████████████████▏                 | 1.38M/2.58M [00:02<00:01, 735kB/s]     59%|██████████████████████▍               | 1.52M/2.58M [00:02<00:01, 881kB/s]     63%|███████████████████████▊              | 1.62M/2.58M [00:02<00:01, 771kB/s]     70%|██████████████████████████▍           | 1.80M/2.58M [00:03<00:00, 813kB/s]     77%|█████████████████████████████▏        | 1.98M/2.58M [00:03<00:00, 846kB/s]     80%|██████████████████████████████▍       | 2.07M/2.58M [00:03<00:00, 846kB/s]     87%|████████████████████████████████▉     | 2.24M/2.58M [00:03<00:00, 878kB/s]     94%|███████████████████████████████████▉  | 2.44M/2.58M [00:03<00:00, 935kB/s]     99%|█████████████████████████████████████▌| 2.55M/2.58M [00:03<00:00, 941kB/s]      0%|                                              | 0.00/2.58M [00:00<?, ?B/s]    100%|█████████████████████████████████████| 2.58M/2.58M [00:00<00:00, 3.48GB/s]
+      0%|                                              | 0.00/2.14M [00:00<?, ?B/s]      4%|█▍                                    | 80.9k/2.14M [00:00<00:04, 434kB/s]     15%|█████▉                                 | 327k/2.14M [00:00<00:01, 957kB/s]     53%|███████████████████▌                 | 1.13M/2.14M [00:00<00:00, 3.16MB/s]      0%|                                              | 0.00/2.14M [00:00<?, ?B/s]    100%|█████████████████████████████████████| 2.14M/2.14M [00:00<00:00, 2.67GB/s]
+    SSVEP Exoskeleton-CrossSubject:   0%|          | 0/2 [00:00<?, ?it/s]    SSVEP Exoskeleton-CrossSubject:  50%|#####     | 1/2 [00:00<00:00,  3.96it/s]    SSVEP Exoskeleton-CrossSubject: 100%|##########| 2/2 [00:00<00:00,  3.94it/s]    SSVEP Exoskeleton-CrossSubject: 100%|##########| 2/2 [00:00<00:00,  3.94it/s]
+
 
 
 
 .. GENERATED FROM PYTHON SOURCE LINES 125-127
 
-Filter bank processing, determine automatically the filter from the
+Filter bank processing, determine the filter automatically from the
 stimulation frequency values of events.
 
 .. GENERATED FROM PYTHON SOURCE LINES 127-133
@@ -265,6 +277,14 @@ stimulation frequency values of events.
 
 
 
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    SSVEP Exoskeleton-CrossSubject:   0%|          | 0/2 [00:00<?, ?it/s]    SSVEP Exoskeleton-CrossSubject:  50%|#####     | 1/2 [00:00<00:00,  4.78it/s]    SSVEP Exoskeleton-CrossSubject: 100%|##########| 2/2 [00:00<00:00,  4.42it/s]    SSVEP Exoskeleton-CrossSubject: 100%|##########| 2/2 [00:00<00:00,  4.46it/s]
 
 
 
@@ -286,6 +306,14 @@ TRCA processing also relies on filter bank that is automatically designed.
 
 
 
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    SSVEP Exoskeleton-CrossSubject:   0%|          | 0/2 [00:00<?, ?it/s]    SSVEP Exoskeleton-CrossSubject:  50%|#####     | 1/2 [00:01<00:01,  1.14s/it]    SSVEP Exoskeleton-CrossSubject: 100%|##########| 2/2 [00:02<00:00,  1.14s/it]    SSVEP Exoskeleton-CrossSubject: 100%|##########| 2/2 [00:02<00:00,  1.14s/it]
 
 
 
@@ -313,9 +341,9 @@ After processing the three, we simply concatenate the results.
 Plot Results
 ----------------
 
-Here we plot the results.
+Here we display the results as stripplot, with a pointplot for error bar.
 
-.. GENERATED FROM PYTHON SOURCE LINES 151-168
+.. GENERATED FROM PYTHON SOURCE LINES 151-167
 
 .. code-block:: default
 
@@ -334,7 +362,6 @@ Here we plot the results.
     sns.pointplot(data=results, y="score", x="pipeline", ax=ax, zorder=1, palette="Set1")
     ax.set_ylabel("Accuracy")
     ax.set_ylim(0.1, 0.6)
-    plt.savefig("ssvep.png")
     fig.show()
 
 
@@ -350,7 +377,7 @@ Here we plot the results.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  11.923 seconds)
+   **Total running time of the script:** ( 0 minutes  20.264 seconds)
 
 
 .. _sphx_glr_download_auto_examples_plot_cross_subject_ssvep.py:

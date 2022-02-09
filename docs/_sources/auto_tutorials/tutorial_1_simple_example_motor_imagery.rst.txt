@@ -245,7 +245,7 @@ paradigm (note that BNCI2014001 is in it)
 
  .. code-block:: none
 
-    [<moabb.datasets.bnci.BNCI2014001 object at 0x7f415842c280>, <moabb.datasets.bnci.BNCI2014004 object at 0x7f415842c880>, <moabb.datasets.gigadb.Cho2017 object at 0x7f415842cc10>, <moabb.datasets.Lee2019.Lee2019_MI object at 0x7f415842c910>, <moabb.datasets.mpi_mi.MunichMI object at 0x7f415842c640>, <moabb.datasets.physionet_mi.PhysionetMI object at 0x7f415842c3a0>, <moabb.datasets.schirrmeister2017.Schirrmeister2017 object at 0x7f415842cac0>, <moabb.datasets.bbci_eeg_fnirs.Shin2017A object at 0x7f415842c400>, <moabb.datasets.Weibo2014.Weibo2014 object at 0x7f415842cfa0>, <moabb.datasets.Zhou2016.Zhou2016 object at 0x7f415842cb50>]
+    [<moabb.datasets.bnci.BNCI2014001 object at 0x7efd25fd0160>, <moabb.datasets.bnci.BNCI2014004 object at 0x7efd25fd05b0>, <moabb.datasets.gigadb.Cho2017 object at 0x7efd25fd06a0>, <moabb.datasets.Lee2019.Lee2019_MI object at 0x7efd25fd0070>, <moabb.datasets.mpi_mi.MunichMI object at 0x7efd25fd0310>, <moabb.datasets.physionet_mi.PhysionetMI object at 0x7efd25fd0040>, <moabb.datasets.schirrmeister2017.Schirrmeister2017 object at 0x7efd25fd0a90>, <moabb.datasets.bbci_eeg_fnirs.Shin2017A object at 0x7efd25fd0970>, <moabb.datasets.Weibo2014.Weibo2014 object at 0x7efd25fd0220>, <moabb.datasets.Zhou2016.Zhou2016 object at 0x7efd25fd0b50>]
 
 
 
@@ -346,6 +346,14 @@ We obtain the results in the form of a pandas dataframe
 
 
 
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    001-2014-WithinSession:   0%|          | 0/3 [00:00<?, ?it/s]    001-2014-WithinSession:  33%|###3      | 1/3 [00:06<00:12,  6.10s/it]    001-2014-WithinSession:  67%|######6   | 2/3 [00:11<00:05,  5.95s/it]    001-2014-WithinSession: 100%|##########| 3/3 [00:17<00:00,  5.89s/it]    001-2014-WithinSession: 100%|##########| 3/3 [00:17<00:00,  5.92s/it]
+
 
 
 
@@ -422,7 +430,7 @@ strings for its labeling. This is why we create the field 'subj'.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  21.599 seconds)
+   **Total running time of the script:** ( 0 minutes  23.151 seconds)
 
 
 .. _sphx_glr_download_auto_tutorials_tutorial_1_simple_example_motor_imagery.py:
