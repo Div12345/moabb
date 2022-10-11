@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tutorial 2: Using multiple datasets &#8212; moabb 0.4.4 documentation</title>
+    <title>Tutorial 2: Using multiple datasets &#8212; moabb 0.4.6 documentation</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
@@ -21,10 +21,10 @@
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
-<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js "></script>
-<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
-<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js "></script>
-<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
 
   </head><body>
 
@@ -39,7 +39,7 @@
         </button>
         <a class="navbar-brand" href="../index.html">
           moabb</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.4.4</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.4.6</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -62,7 +62,9 @@
       aria-labelledby="dLabelGlobalToc"><ul>
 <li class="toctree-l1"><a class="reference internal" href="../whats_new.html">What’s new</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../whats_new.html#develop-branch">Develop branch</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../whats_new.html#version-0-4-4-stable-pypi">Version - 0.4.4  (Stable - PyPi)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../whats_new.html#version-0-4-6-stable-pypi">Version - 0.4.6  (Stable - PyPi)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../whats_new.html#version-0-4-5">Version - 0.4.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../whats_new.html#version-0-4-4">Version - 0.4.4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../whats_new.html#version-0-4-3">Version - 0.4.3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../whats_new.html#version-0-4-2">Version - 0.4.2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../whats_new.html#version-0-4-1">Version - 0.4.1</a></li>
@@ -210,13 +212,13 @@ the evaluation from scratch if a problem occurs.</p>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Zhou 2016-WithinSession:   0%|          | 0/3 [00:00&lt;?, ?it/s]
-Zhou 2016-WithinSession:  33%|###3      | 1/3 [00:05&lt;00:10,  5.16s/it]
-Zhou 2016-WithinSession:  67%|######6   | 2/3 [00:09&lt;00:04,  4.59s/it]
-Zhou 2016-WithinSession: 100%|##########| 3/3 [00:13&lt;00:00,  4.44s/it]
-Zhou 2016-WithinSession: 100%|##########| 3/3 [00:13&lt;00:00,  4.54s/it]
+Zhou 2016-WithinSession:  33%|###3      | 1/3 [00:04&lt;00:08,  4.26s/it]
+Zhou 2016-WithinSession:  67%|######6   | 2/3 [00:07&lt;00:03,  3.88s/it]
+Zhou 2016-WithinSession: 100%|##########| 3/3 [00:11&lt;00:00,  3.77s/it]
+Zhou 2016-WithinSession: 100%|##########| 3/3 [00:11&lt;00:00,  3.83s/it]
 
 001-2014-WithinSession:   0%|          | 0/3 [00:00&lt;?, ?it/s]
-001-2014-WithinSession: 100%|##########| 3/3 [00:00&lt;00:00, 484.13it/s]
+001-2014-WithinSession: 100%|##########| 3/3 [00:00&lt;00:00, 638.76it/s]
 </pre></div>
 </div>
 </div>
@@ -234,11 +236,11 @@ is to plot the results from the three datasets with just one line.</p>
     <span class="n">orient</span><span class="o">=</span><span class="s2">&quot;h&quot;</span><span class="p">,</span>
     <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;viridis&quot;</span><span class="p">,</span>
 <span class="p">)</span>
-<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
 <img alt="dataset = 001-2014, dataset = Zhou 2016" class="sphx-glr-single-img" src="../_images/sphx_glr_tutorial_2_using_mulitple_datasets_001.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  14.007 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  11.869 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-tutorials-tutorial-2-using-mulitple-datasets-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/a1721df1b7d19e3e027162c49fa733d4/tutorial_2_using_mulitple_datasets.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">tutorial_2_using_mulitple_datasets.py</span></code></a></p>
